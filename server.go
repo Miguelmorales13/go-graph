@@ -10,7 +10,6 @@ import (
 	"github.com/Miguelmorales13/go-graph/graph"
 	"github.com/Miguelmorales13/go-graph/graph/generated"
 )
-
 const defaultPort = "8080"
 
 func main() {
