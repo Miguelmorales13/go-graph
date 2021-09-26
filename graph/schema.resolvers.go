@@ -5,18 +5,19 @@ package graph
 
 import (
 	"context"
-	"fmt"
-
 	"github.com/Miguelmorales13/go-graph/graph/generated"
 	"github.com/Miguelmorales13/go-graph/graph/model"
 )
 
+var todos  = []*model.Todo{}
+
+
 func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
-	panic(fmt.Errorf("not implemented"))
+	return  *model.Todo{ID    :"1", Text  :input.Text, Done : true},nil
 }
 
 func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
-	panic(fmt.Errorf("not implemented"))
+	return todos
 }
 
 // Mutation returns generated.MutationResolver implementation.
